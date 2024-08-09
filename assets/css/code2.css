@@ -1,0 +1,51 @@
+div.highlight {
+  border: 1px solid #ccc;
+}
+
+.highlight {
+  display: block;
+  overflow-x: auto;
+  padding: 0.1em;
+  background: #eee;
+  color: black;
+  padding: 1px 10px;
+  -webkit-text-size-adjust: none;
+}
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs { color: #006a00; } /* Comment */
+
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr { color: #aa0d91; } /* Keyword */
+
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gh { font-weight: bold } /* Generic.Heading */
+.highlight .gp { font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { font-weight: bold } /* Generic.Subheading */
+
+.highlight .kt { color: #5c2699; } /* Keyword.Type */
+
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss { color: #c41a16; } /* Literal.String */
+
+.highlight .nc { color: #1c00cf; } /* Name.Class */
+
+.highlight .ow { color: #0000ff; } /* Operator.Word */

@@ -1,0 +1,36 @@
+{% if page.is_intro %}
+<div>
+    <div class="title-container">
+        <div class="intro-title">
+
+            <h1><i class="chapter">{{ page.title }}</i></h1>
+
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="header">
+    <div class="title-container">
+        <div class="chapter-title">
+
+            <h1><i class="chapter">{{ page.title }}</i><br />
+
+            {% if page.exam_objectives %}
+            {{ page.subtitle }}</h1>
+
+            <p><br /></p>
+
+            <h3 style="text-align: center;"><i>Exam Objectives</i></h3>
+            <p style="text-align: center;">
+                {% for objective in page.exam_objectives %}
+                    <i>{{ objective }}<br /></i>
+                {% endfor %}
+            </p>
+            {% else %}
+            </h1>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endif %}

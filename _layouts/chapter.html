@@ -1,0 +1,43 @@
+---
+layout: base
+---
+
+    
+            {{ content }} <!-- This is where your page content will be injected -->
+            
+            {% unless page.is_intro %}
+            {% if page.answers_link %}
+            <div class="answers">
+                <a href="{{ page.answers_link }}" target="_blank">Open answers page</a>
+            </div>
+            {% endif %}
+            {% endunless %}
+
+            <div class="book-info">
+                <p>Do you like what you read? Would you consider?</p>
+                
+                {% include buy-info.html %}
+                
+                <br/>
+                <p>Do you have a problem or something to say?</p>
+                <p><a href="https://github.com/eh3rrera/ocpj17-book/issues" target="_blank">Report an issue with the book</a></p>
+                <p><a href="https://eherrera.net/" target="_blank">Contact me</a></p>
+            </div>
+
+            <div class="linkbox">
+                <div class="previous">
+                    {% if page.previous_link and page.previous_title %}
+                        <a href="{{ page.previous_link }}">{{ page.previous_title }}</a>
+                    {% else %}
+                        &nbsp;
+                    {% endif %}
+                </div>
+                <div class="next">
+                    {% if page.next_link and page.next_title %}
+                        <a href="{{ page.next_link }}">{{ page.next_title }}</a>
+                    {% else %}
+                        &nbsp;
+                    {% endif %}
+                </div>
+                <div style="clear:both;"></div>
+            </div>

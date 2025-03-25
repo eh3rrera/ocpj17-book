@@ -83,7 +83,7 @@ exam_objectives:
 - **A.** In a `try-with-resources`, the `catch` block is required.
   - This option is incorrect. In a `try-with-resources` statement, the catch block is optional. The primary purpose of `try-with-resources` is to ensure that each resource is closed at the end of the statement, whether an exception is thrown or not.
 
-- **B.** The `throw` keyword is used to throw an exception. 
+- **B.** The `throws` keyword is used to throw an exception. 
   - This option is incorrect. The `throws` keyword is used in method declarations to specify that the method can throw an exception, not to throw an exception. The `throw` keyword is used to actually throw an exception.
 
 - **C.** In a `try-with-resources` block, if you declare more than one resource, they have to be separated by a semicolon.

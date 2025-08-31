@@ -172,7 +172,7 @@ protected enum Direction {
     }
 }
 ```
-  - This option is incorrect for a couple of reasons. First, `protected` is not a valid access modifier for enums at the top level. Enums can be `public` or package-private (no modifier). Second, the `printDirection()` method is missing a visibility modifier, and it appears to be intended as a private method (which would also be incorrect as it wouldn't be callable from outside the enum itself), but the syntax is incorrect as it lacks the `void` return type.
+  - This option is incorrect for two reasons. First, `protected` is not a valid access modifier for a top-level enum, top-level enums can only be `public` or package-private (no modifier). Second, `printDirection()` method is missing a return type (e.g., `void`).
 
 - **D)** 
 ```java

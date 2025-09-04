@@ -34,8 +34,8 @@ exam_objectives:
 
 **Explanation:**
 
-- **A)** `module com.example { exports com.example.api; }`
-  - This option is incorrect. The content inside the braces is not valid module declaration syntax. The correct syntax to export a package would be `exports com.example.api;`.
+- **A)** `module com.example { export com.example.api; }`
+  - This option is incorrect. In this case, `exports`is missing an "s". The correct syntax to export a package would be `exports com.example.api;`.
 
 - **B)** `declare module com.example { }`
   - This option is incorrect. There is no `declare` keyword used in the JPMS for defining a module.

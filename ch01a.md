@@ -162,11 +162,11 @@ exam_objectives:
 
 **Explanation:**
 
-- **A)** `int public static final computeSum(int num1, int num2)` is incorrect because the return type in method declarations goes right before the name of the method, not at the beginning.
+- **A)** `int public static final computeSum(int num1, int num2)  { return num1 + num2 }` is incorrect because the return type in method declarations goes right before the name of the method, not at the beginning.
 
-- **B)** `private void updateRecord(int id) throws IOException` is correct. This method declaration is syntactically correct in Java. It uses the `private` access modifier, specifies a return type (`void`), includes an exception (`IOException`) that this method might throw, and correctly defines the parameter list.
+- **B)** `private void updateRecord(int id) throws IOException {}` is correct. This method declaration is syntactically correct in Java. It uses the `private` access modifier, specifies a return type (`void`), includes an exception (`IOException`) that this method might throw, and correctly defines the parameter list.
 
-- **C)** `synchronized boolean checkStatus [int status]` Correct syntax requires parentheses for the parameter list, even when there are no parameters, making the correct declaration `synchronized boolean checkStatus(int status)`.
+- **C)** `synchronized boolean checkStatus [int status] { return status == 1; }` Correct syntax requires parentheses for the parameter list, even when there are no parameters, making the correct declaration `synchronized boolean checkStatus(int status)`.
 
 - **D)** `float calculateArea() {}` is incorrect because a method that returns `float` cannot have an empty method body.
 
@@ -294,8 +294,8 @@ After calling changeValue: 10
 - **B)** The class `Vehicle` will compile with an error because it does not provide a default constructor.
   - This option is incorrect. Java does not require an explicit default constructor if the class provides any other constructors. The absence of a default constructor (one that takes no arguments) is not a compilation error; it simply means that the programmer cannot instantiate the class using a no-argument constructor unless it's explicitly defined.
 
-- **C)** It is possible to create an instance of `Vehicle` with both `type` and `maxSpeed` initialized.
-  - This option is incorrect because with the current constructors, it's not possible to create a `Vehicle` instance with both `type` and `maxSpeed` initialized through a single constructor call.
+- **C)** It is possible to create an instance of `Vehicle` with both `type` and `maxSpeed` set to specific values through a single constructor call.
+  - This option is incorrect because none of the existing constructors accept both a `String` and an `int` parameter. Each constructor only sets one field to a caller-specified value; the other field retains its default value (`null` or `0`).
 
 - **D)** Calling either constructor will initialize both `type` and `maxSpeed` fields of the `Vehicle` class.
   - This option is incorrect. Calling either constructor only initializes the parameter that is provided to it. The first constructor initializes the `type`, and the second initializes the `maxSpeed`. Without additional code, such as a constructor that accepts both parameters or setter methods, there's no way for either constructor alone to initialize both fields.

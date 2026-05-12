@@ -171,7 +171,7 @@ exam_objectives:
 
 
 
-**10. The correct answer is D.**
+**10. The correct answer is C.**
 
 **Explanation:**
 
@@ -179,13 +179,13 @@ exam_objectives:
   - This option is incorrect because the `drive` method in the `Car` class has a different parameter type (`long`) than the method in the `Vehicle` class (`int`). Due to the difference in parameter types, the `Car` class's `drive` method does not override but rather overloads the `Vehicle` class's `drive` method. Since the method is called on a `Vehicle` reference, the `Vehicle` class's `drive` method is invoked.
 
 - **B)** It does not compile because the `drive` method cannot be called using a `Vehicle` reference. 
-  - This option is incorrect because `Vehicle` defines the `drive` method correctly.
-
+  - This option is incorrect because `Vehicle` defines the `drive` method correctly.  
+  
 - **C)** It does not compile because the `drive` method in the `Car` class does not properly override the `drive` method in the `Vehicle` class.
-  - This option is incorrect because the code does compile. The `@Override` annotation does not cause a compile-time error here because it is not strictly enforced in terms of method overloading (changing the parameter type creates a new method signature, making this a valid overload).
-
+  - This option is correct. The `@Override` annotation explicitly tells the compiler that the annotated method is intended to override a method from a superclass. However, the `drive` method in the `Car` class has a parameter of type `long`, while the `drive` method in the `Vehicle` class has a parameter of type `int`. Since the parameter types differ, the `Car` method does not override the `Vehicle` method, it's an overload. The compiler enforces the `@Override` contract strictly, so it produces an error such as: `method does not override or implement a method from a supertype`. As a result, the code fails to compile.
+  
 - **D)** It compiles and prints `"Vehicle driving at speed: 60"` because the `drive` method in the `Car` class is an overload, not an override.
-  - This option is correct. The `drive` method in the `Car` class has a different signature from the `drive` method in the `Vehicle` class due to the parameter type (`int` vs. `long`). Therefore, the `drive` method in the `Car` class overloads the superclass method rather than overriding it. When a `Vehicle` reference calls the `drive` method with an `int` argument, it invokes the `Vehicle` class's `drive` method, not the `Car` class's method.
+  - This option is incorrect. It correctly identifies that the `Car` method is an overload rather than an override, but it incorrectly concludes that the code compiles. The `@Override` annotation prevents compilation because the annotated method is not actually overriding anything (see option C). If the `@Override` annotation were removed, then this option would describe the correct behavior. But with the annotation present, the code does not compile.
 
 
 **11. The correct answer is E.**
